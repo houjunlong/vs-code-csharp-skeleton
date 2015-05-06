@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- Project files -->
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+  </ItemGroup>
+  
+  <!-- Project references -->
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>  
+    
+  <PropertyGroup>
+    <!-- Project namespace -->
+    <RootNamespace>CSharpSkeleton</RootNamespace>
+    
+    <!-- Project assembly -->
+    <AssemblyName>CSharpSkeleton</AssemblyName>
+    
+    <!-- Selected configuration and platform -->
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+      
+    <!-- Project output type {Exe, Dll} -->
+    <OutputType>Exe</OutputType>
+    
+    <!-- Framework versin for the build target {v4.0} -->
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+      
+    <!-- Project GUID (Project GUIDs start at 00000000-0000-0000-0000-000000000001 
+         and must be unique per solution -->
+    <ProjectGuid>{00000000-0000-0000-0000-000000000001}</ProjectGuid>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <!-- Project's binary output path -->
+    <OutputPath>../bin</OutputPath>
+    
+    <!-- Project's target platform -->
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    
+    <!-- Enable debugging and include symbols, don't optimize code -->
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    
+    <!-- Error and warning options -->
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
